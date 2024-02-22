@@ -1,0 +1,52 @@
+<app-work-header></app-work-header>
+<div class="relative">
+    <div class="contentLeft">
+        <form class="form" [formGroup]="userForm" (ngSubmit)="addUser()">
+            <div class="block">
+                <label for="login">Login</label>
+                <input formControlName="login" name="login" type="text" id="login" placeholder="Login" required>
+            </div>
+            <div class="block">
+                <label for="password">Password</label>
+                <input formControlName="password" name="password" type="password" id="password" placeholder="Password"
+                    required>
+            </div>
+            <div class="block">
+                <label for="email">Email address</label>
+                <input formControlName="email" name="email" type="text" id="email" placeholder="Email address" required>
+            </div>
+            <button *ngIf="!editStatus" type="submit" value="Sign Up" id="signUp" class="addUser" (click)="addUser()"
+                [disabled]="!userForm.valid">
+                Add User
+            </button>
+            <button type="button" *ngIf="editStatus" (click)="updateUser()" class="saveChanges">Save changes</button>
+        </form>
+    </div>
+
+    <div class="contentRight">
+        <table>
+            <thead>
+                <th>#</th>
+                <th>Login</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of allUsers">
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.login }}</td>
+                    <td>{{ user.password }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>
+                        <button (click)="editUser(user.id)" class="edit" [disabled]="editStatus">Edit</button>
+                    </td>
+                    <td>
+                        <button (click)="deleteUser(user.id)" class="delete" [disabled]="editStatus">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

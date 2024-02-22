@@ -1,0 +1,38 @@
+        <div class="content">
+    <div class="wordsDiv">
+        <div class="topInfo">
+            angular list of prohibited words
+        </div>
+        <img src="/assets/images/words.png" alt="">
+        <span>angular list of prohibited words</span>
+        <hr>
+        <div class="btnDetails">
+            <button type="button" [routerLink]="[ '/works/words' ]" routerLink="active" aria-current="page">details</button>
+        </div>
+    </div>
+
+    <div class="tasksDiv">
+        <div class="topInfo">
+            angular tasks list
+        </div>
+        <img src="/assets/images/tasks.png" alt="">
+        <span>angular tasks list </span>
+        <hr>
+        <div class="btnDetails">
+            <button type="button" [routerLink]="[ '/works/tasks' ]" routerLink="active" aria-current="page">details</button>
+        </div>
+    </div>
+
+    <div class="usersDiv">
+        <div class="topInfo">
+            angular users list
+        </div>
+        <img src="/assets/images/users.png" alt="">
+        <span>angular users list</span>
+        <hr>
+        <div class="btnDetails">
+            <button type="button" [routerLink]="[ '/works/users' ]" routerLink="active" aria-current="page">details</button>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

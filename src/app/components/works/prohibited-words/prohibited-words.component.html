@@ -1,0 +1,21 @@
+<app-work-header></app-work-header>
+  <div class="content">
+    <div class="example">
+      <span class="staticTxt"> {{ staticTxt }}</span>
+      <span class="noStaticTxt redTXT"> {{ noStaticTxtContent  }}</span>
+    </div>
+    <div class="input">
+  
+      <input 
+      type="text" 
+      class="inputWord" 
+      [(ngModel)]="inputWordValue" 
+      [ngClass]="{'error-border': inputWordValue === ''}"
+      placeholder="please write a text: ">
+  
+      <button type="button" class="button yellow add" (click)="addWord()">Add</button>
+      <button type="button" class="button red reset" (click)="reset()">Reset</button>
+    </div>
+    <textarea [(ngModel)]="textareaValue" cols="30" rows="10" class="inputText" placeholder="text here"></textarea>
+    <button type="button" class="buttonBig green" (click)="censor()">Cenzor</button>
+  </div>

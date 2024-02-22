@@ -1,0 +1,132 @@
+$color_1: white;
+$color_2: rgb(195, 13, 13);
+$color_3: rgb(3, 20, 27);
+$font-family_1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$background-color_1: aliceblue;
+$background-color_2: rgb(235, 235, 22);
+$background-color_3: rgb(195, 13, 13);
+$background-color_4: rgb(5, 97, 14);
+$background-color_5: rgb(233, 233, 233);
+$border-color_1: #fff;
+
+.error-border {
+    outline: 2px solid red;
+}
+
+body {
+	font-family: $font-family_1;
+}
+.button {
+	width: 80px;
+	height: 30px;
+	font-family: $font-family_1;
+	font-size: 15px;
+	background-color: $background-color_1;
+	border: none;
+	border-radius: 5px;
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0 0 15px #ffffff, 0 0 30px rgba(255, 255, 255, 0.9), 0 0 45px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.7);
+		border-color: $border-color_1;
+	}
+}
+.buttonBig {
+	width: 100%;
+	height: 30px;
+	font-family: $font-family_1;
+	font-size: 15px;
+	background-color: $background-color_1;
+	border: none;
+	border-radius: 5px;
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0 0 5px #ffffff, 0 0 10px rgba(5, 97, 14, 0.9), 0 0 25px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.7);
+		border-color: $border-color_1;
+	}
+}
+.yellow {
+	background-color: $background-color_2;
+}
+.red {
+	color: $color_1;
+	background-color: $background-color_3;
+}
+.green {
+	color: $color_1;
+	background-color: $background-color_4;
+}
+.redTXT {
+	color: $color_2;
+}
+input[type=text] {
+	padding: 5px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 5px;
+	&:focus {
+		outline: 2px solid #969696;
+		border-radius: 5px;
+	}
+}
+textarea {
+	padding: 5px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 5px;
+	resize: none;
+	&:focus {
+		outline: 2px solid #969696;
+		border-radius: 5px;
+	}
+}
+header {
+	background-color: $background-color_5;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 200px;
+}
+.txtHeader {
+	font-size: 35px;
+	color: $color_3;
+}
+.content {
+	width: 600px;
+	height: 200px;
+	padding: 20px;
+	margin: 0 auto;
+	border-radius: 10px;
+	background-color: $background-color_5;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.example {
+	display: flex;
+	flex-direction: row;
+}
+.staticTxt {
+	padding: 5px;
+	font-size: 20px;
+}
+.noStaticTxt {
+	padding: 5px;
+	font-size: 20px;
+}
+.input {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.inputWord {
+	width: 70%;
+	height: 30px;
+}
+.inputText {
+	width: 595px;
+	height: 80px;
+}

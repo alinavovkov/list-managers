@@ -1,0 +1,21 @@
+<!-- <p>angular-task-list works!</p> -->
+<app-work-header></app-work-header>
+
+<div class="content">
+    <h2>Plan your day!</h2>
+    <h3>User: Ivan Ivanov. Count of tasks {{ this.taskList.length }}</h3>
+    <hr>
+    <div class="inputPart">
+        <input type="text" placeholder="write your task here" class="inputTask" [(ngModel)]="txtTask" />
+        <input *ngIf="!editStatus" type="button" value="Add" class="btnAdd button" [disabled]="!txtTask"
+            (click)="addBtn()" />
+        <button type="button" *ngIf="editStatus" (click)="updateTask()" class="saveChanges">Save</button>
+
+    </div>
+    <hr>
+    <!-- <app-child-list [tasks]="taskList";[txtTask]="textOfTask"></app-child-list> -->
+
+    <app-child-list [tasks]="taskList" [textOfTask]="txtTask">
+    </app-child-list>
+
+</div>
